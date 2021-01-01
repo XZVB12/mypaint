@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: mypaint v2.0.0-alpha.8-1-g4490f06\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-16 11:30+0200\n"
-"PO-Revision-Date: 2020-07-21 15:41+0000\n"
-"Last-Translator: Isabelle Lepage <noisette@netc.eu>\n"
+"PO-Revision-Date: 2020-11-16 03:28+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/mypaint/mypaint/"
 "fr/>\n"
 "Language: fr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #. TRANSLATORS: Name of first column in the button map preferences.
 #. TRANSLATORS: Refers to an action bound to a mod+button combination.
@@ -428,7 +428,7 @@ msgstr "Nouveau"
 #, python-brace-format
 msgctxt "brushpack import failure messages"
 msgid "No file named “{order_conf_file}”. This is not a brushpack."
-msgstr "Aucun fichier nommé « {order_conf_file} ». Ceci n'est pas un pinceau."
+msgstr "Aucun fichier nommé « {order_conf_file} ». Ceci n'est pas un pinceau."
 
 #: ../gui/brushmanager.py:704
 #, python-brace-format
@@ -455,15 +455,14 @@ msgid "Unknown Brush"
 msgstr "Brosse inconnue"
 
 #: ../gui/brushmanip.py:191
-#, fuzzy
 msgctxt "brush resize mode - name"
 msgid "Resize Brush"
-msgstr "Renommez la brosse"
+msgstr "Redimensionner la brosse"
 
 #: ../gui/brushmanip.py:196
 msgctxt "brush resize mode - usage"
 msgid "Change brush size by dragging on the canvas"
-msgstr ""
+msgstr "Changer la taille du pinceau en le faisant glisser sur la toile"
 
 #: ../gui/brushselectionwindow.py:220
 msgctxt "brush group: context menu for a single brush"
@@ -1423,7 +1422,7 @@ msgstr "Nom"
 
 #: ../gui/dialogs.py:126
 msgid "Overwrite brush?"
-msgstr "Écraser la Brosse ?"
+msgstr "Remplacer la brosse ?"
 
 #: ../gui/dialogs.py:134 ../gui/dialogs.py:204
 msgid "Replace"
@@ -1602,7 +1601,7 @@ msgstr "MyPaint"
 #: ../gui/drawwindow.py:301
 msgctxt "Open dragged file confirm dialog: title"
 msgid "Open Dragged File?"
-msgstr "Ouvrir le fichier déposé ?"
+msgstr "Ouvrir le fichier déposé ?"
 
 #: ../gui/drawwindow.py:305
 msgctxt "Open dragged file confirm dialog: continue button"
@@ -1696,8 +1695,8 @@ msgid ""
 "MyPaint needs to edit a file of type “{type_name}” ({content_type}). What "
 "application should it use?"
 msgstr ""
-"MyPaint a besoin d'éditer un fichier de type "
-"« {type_name} » ({content_type}). Quelle application doit-il utiliser ?"
+"MyPaint a besoin de modifier un fichier de type « {type_name} » "
+"({content_type}). Quelle application doit-il utiliser ?"
 
 #: ../gui/externalapp.py:108
 #, python-brace-format
@@ -4587,7 +4586,7 @@ msgstr "Type de curseur à main levée :"
 #: ../gui/preferenceswindow.glade:910
 msgctxt "Prefs Dialog|View|Interface|"
 msgid "Dark theme variant:"
-msgstr "Variantes de thèmes sombres :"
+msgstr "Variante de thème sombre :"
 
 #: ../gui/preferenceswindow.glade:920
 msgctxt "Prefs Dialog|View|Interface|Dark theme variant|"
@@ -6079,8 +6078,7 @@ msgstr "Détails de la couleur"
 #: ../gui/resources.xml:1029
 msgctxt "Accel Editor (descriptions)"
 msgid "Show a color details dialog with text entry."
-msgstr ""
-"Affiche une boîte de dialogue de détail de couleur avec saisie de texte."
+msgstr "Afficher un dialogue des détails de couleur avec champs de saisie."
 
 #: ../gui/resources.xml:1035
 msgctxt "Menu→Color"
@@ -6090,7 +6088,7 @@ msgstr "Couleur suivante de la palette"
 #: ../gui/resources.xml:1036
 msgctxt "Accel Editor (descriptions)"
 msgid "Set painting color to the next color in the palette."
-msgstr "Choisi la couleur suivante de la palette."
+msgstr "Ajuster la couleur à la couleur suivante dans la palette"
 
 #: ../gui/resources.xml:1042
 #, fuzzy
@@ -6101,7 +6099,7 @@ msgstr "Couleur de la palette précédente"
 #: ../gui/resources.xml:1043
 msgctxt "Accel Editor (descriptions)"
 msgid "Set painting color to the previous color in the palette."
-msgstr "Choisi la couleur précédente de la palette."
+msgstr "Ajuster la couleur à la couleur précédente dans la palette"
 
 #: ../gui/resources.xml:1049
 #, fuzzy
@@ -6112,7 +6110,7 @@ msgstr "Ajouter une couleur à la palette"
 #: ../gui/resources.xml:1050
 msgctxt "Accel Editor (descriptions)"
 msgid "Append the current painting color to the palette."
-msgstr "Ajouter la couleur actuelle à la palette."
+msgstr "Ajouter la couleur actuelle à la palette"
 
 #: ../gui/resources.xml:1058
 msgctxt "Menu (labels)"
@@ -6342,7 +6340,7 @@ msgstr "À propos de MyPaint"
 #: ../gui/resources.xml:1247
 msgctxt "Accel Editor (descriptions)"
 msgid "Show MyPaint’s license, version number, and credits."
-msgstr "Informations sur MyPaint...license, version, crédits..."
+msgstr "Afficher les informations sur MyPaint : licence, version, crédits."
 
 #: ../gui/resources.xml:1256
 msgctxt "Menu→Help (labels)"
@@ -6370,7 +6368,7 @@ msgstr "Lancer le ramasse-miette maintenant"
 msgctxt "Accel Editor (descriptions)"
 msgid "Free memory used for Python objects which are no longer in use."
 msgstr ""
-"Mémoire libre utilisée pour les objets Python qui ne sont plus utilisés."
+"Libérer la mémoire occupée par les objets Python qui ne son plus utilisés."
 
 #. FIXME: convert to a ToggleAction
 #: ../gui/resources.xml:1277
@@ -6387,7 +6385,7 @@ msgstr "Démarrer/Arrêter le profilage Python (cProfile)"
 #: ../gui/resources.xml:1285
 msgctxt "Menu→Help→Debug (labels), Accel Editor (labels)"
 msgid "Simulate a Crash…"
-msgstr "Simule un accident…"
+msgstr "Simuler un plantage…"
 
 #: ../gui/resources.xml:1286
 msgctxt "Accel Editor (descriptions)"
@@ -6561,7 +6559,7 @@ msgstr ""
 #: ../gui/resources.xml:1427
 msgctxt "Menu→Color (labels), Accel Editor (labels)"
 msgid "HSV Square"
-msgstr "HSV Carré"
+msgstr "Carré TSV"
 
 #: ../gui/resources.xml:1428
 msgctxt "Accel Editor (descriptions)"
@@ -6582,12 +6580,12 @@ msgstr "Ajuster les composantes individuelles de la couleur."
 #: ../gui/resources.xml:1443
 msgctxt "Menu→Color (labels), Accel Editor (labels)"
 msgid "Liquid Wash"
-msgstr ""
+msgstr "Délavé"
 
 #: ../gui/resources.xml:1444
 msgctxt "Accel Editor (descriptions)"
 msgid "Dockable color selector showing a liquid-like wash of nearby colors."
-msgstr ""
+msgstr "Palette de délavés avoisinants"
 
 #: ../gui/resources.xml:1451
 msgctxt "Menu→Color (labels), Accel Editor (labels)"
@@ -6602,7 +6600,7 @@ msgstr "sélecteur de couleur ancrable avec des anneaux concentriques HSV ."
 #: ../gui/resources.xml:1459
 msgctxt "Menu→Color (labels), Accel Editor (labels)"
 msgid "Crossed Bowl"
-msgstr ""
+msgstr "Mélangeur orthonormé"
 
 #: ../gui/resources.xml:1460
 msgctxt "Accel Editor (descriptions)"
@@ -7050,7 +7048,7 @@ msgctxt "Toolbar (tooltips)"
 msgid ""
 "Edit Frame: define a frame around the document to give it a finite size."
 msgstr ""
-"Éditer le cadre : Défini un cadre autour du document afin de lui donner une "
+"Modifier le cadre : définir un cadre autour du document pour lui donner une "
 "taille déterminée."
 
 #: ../gui/resources.xml:1832
@@ -7073,10 +7071,9 @@ msgid "Edit Painting Symmetry"
 msgstr ""
 
 #: ../gui/resources.xml:1843
-#, fuzzy
 msgctxt "Toolbar (short labels)"
 msgid "Symmetry"
-msgstr "Axe de symétrie"
+msgstr "Symétrie"
 
 #: ../gui/resources.xml:1844
 msgctxt "Toolbar (tooltips)"
@@ -7111,10 +7108,9 @@ msgid "Pick Color: set the painting color from screen pixels."
 msgstr "Pipette à couleur : prends la couleur du pixel de l'écran."
 
 #: ../gui/resources.xml:1897
-#, fuzzy
 msgctxt "Menu→Color (labels), Accel Editor (labels)"
 msgid "Pick Color Hue"
-msgstr "Pipette à couleurs"
+msgstr "Prendre la teinte"
 
 #: ../gui/resources.xml:1898
 #, fuzzy
@@ -7162,7 +7158,7 @@ msgstr "Prends la couleur du pixel de l'écran."
 #: ../gui/resources.xml:1935
 msgctxt "Menu→Edit→Current Mode (labels)"
 msgid "Flood Fill"
-msgstr ""
+msgstr "Pot de peinture"
 
 #: ../gui/resources.xml:1936
 msgctxt "Toolbar (short labels)"
@@ -7172,7 +7168,7 @@ msgstr "Remplir"
 #: ../gui/resources.xml:1937
 msgctxt "Toolbar (tooltips)"
 msgid "Flood Fill: fill an area with color."
-msgstr "Remplissage : remplit une zone de couleur."
+msgstr "Remplissage : remplir une zone avec de la couleur."
 
 #: ../gui/resources.xml:1945
 msgctxt "Menu→Edit (labels), Accel Editor (labels)"

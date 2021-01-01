@@ -884,14 +884,17 @@ class Document (CanvasController):  # TODO: rename to "DocumentController"
         """``CopyLayer`` GtkAction callback: copy layer to clipboard"""
         # use the full document bbox, so we can paste layers back to the
         # correct position
-        bbox = self.model.get_bbox()
+        rootstack = self.model.layer_stack
+        if self.app.preferences.get("ui.legacy-copy-paste", False):
+            bbox = self.model.get_bbox()
+        else:
+            bbox = rootstack.current.get_bbox()
         if bbox.w == 0 or bbox.h == 0:
             self.app.show_transient_message(C_(
                 "Statusbar message: copy result",
                 u"Empty document, nothing copied."
             ))
             return
-        rootstack = self.model.layer_stack
         pixbuf = rootstack.render_layer_as_pixbuf(
             rootstack.current, bbox,
             alpha=True,
@@ -902,8 +905,8 @@ class Document (CanvasController):  # TODO: rename to "DocumentController"
             "Statusbar message: copy result",
             u"Copied layer as {w}×{h} image."
         ).format(
-            w = pixbuf.get_width(),
-            h = pixbuf.get_height(),
+            w=pixbuf.get_width(),
+            h=pixbuf.get_height(),
         ))
 
     def paste_cb(self, action):
@@ -929,10 +932,23 @@ class Document (CanvasController):  # TODO: rename to "DocumentController"
                 u"Clipboard does not contain an image.",
             ))
             return
-        # Paste to the upper left of the doc bbox (see above)
-        x, y, w, h = self.model.get_bbox()
+
+        # Supports old copy-paste, useful if moving a layer from one document
+        # to another with the same bounding box.
+        if self.app.preferences.get("ui.legacy-copy-paste", False):
+            x, y, __, __ = self.model.get_bbox()
+        # If pasting with a shortcut, the upper left corner of the content
+        # is aligned with the cursor location, otherwise it is centered.
+        elif action.keydown:
+            x, y = self.tdw.display_to_model(
+                *self.get_last_event_info(self.tdw)[1:])
+        else:
+            x, y = self.tdw.get_center_model_coords()
+            x -= pixbuf.get_width()/2.0
+            y -= pixbuf.get_height()/2.0
         try:
-            self.model.load_layer_from_pixbuf(pixbuf, x, y)
+            self.model.load_layer_from_pixbuf(
+                pixbuf, int(x), int(y), to_new_layer=True)
         except Exception:
             logger.exception("Paste failed")
             self.app.show_transient_message(C_(
